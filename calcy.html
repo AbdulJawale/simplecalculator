@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 3px solid black;
+            margin-left:auto;
+            margin-right: auto;
+
+        } 
+        input[type="button"] {
+            /* height: 100%; */
+			width: 100%; 
+			/* padding: 20px 40px;
+			background-color: rgb(148, 193, 57);
+			color: white;
+			font-size: 24px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px; */
+		}
+        input[type="text"] {
+			/* padding: 20px 30px;
+			font-size: 24px;
+			font-weight: bold;
+            background-color: rgb(173, 223, 86);
+			border: none;
+			border-radius: 5px;
+			border: 2px solid black; */
+		} 
+    </style>
+</head>
+<body>
+    <table class="cal">
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+
+            <td><input type="button" value="C" onclick="clr()"></td>
+            
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="one('1')"></td>
+            <td><input type="button" value="2" onclick="two('2')"></td>
+            <td><input type="button" value="3" onclick="three('3')"></td>
+            <td><input type="button" value="/" onclick="divi('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="four('4')"></td>
+            <td><input type="button" value="5" onclick="five('5')"></td>
+            <td><input type="button" value="6" onclick="six('6')"></td>
+            <td><input type="button" value="*" onclick="mul('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="seven('7')"></td>
+            <td><input type="button" value="8" onclick="eight('8')"></td>
+            <td><input type="button" value="9" onclick="nine('9')"></td>
+            <td><input type="button" value="-" onclick="sub('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="zero('0')"></td>
+            <td><input type="button" value="." onclick="dot('.')"></td>
+            <td><input type="button" value="=" onclick="solve()"></td>
+            <td><input type="button" value="+" onclick="add('+')"></td>
+        </tr>
+    </table>
+
+    <script>
+       function clr() {
+        let ele1=document.getElementById("result").value=""; 
+       }
+       function one() {
+        let ele1=document.getElementById("result").value+="1";
+       }
+       function two() {
+        let ele1=document.getElementById("result").value+="2";
+       }
+       function three() {
+        let ele1=document.getElementById("result").value+="3";
+       }
+       function divi() {
+        let ele1=document.getElementById("result").value+="/";
+       }
+       function four() {
+        let ele1=document.getElementById("result").value+="4";
+       }
+       function five() {
+        let ele1=document.getElementById("result").value+="5";
+       }
+       function six() {
+        let ele1=document.getElementById("result").value+="6";
+       }
+       function mul() {
+        let ele1=document.getElementById("result").value+="*";
+       }
+       function seven() {
+        let ele1=document.getElementById("result").value+="7";
+       }
+       function eight() {
+        let ele1=document.getElementById("result").value+="8";
+       }
+       function nine() {
+        let ele1=document.getElementById("result").value+="9";
+       }
+       function sub() {
+        let ele1=document.getElementById("result").value+="-";
+       }
+       function zero() {
+        let ele1=document.getElementById("result").value+="0";
+       }
+       function dot() {
+        let ele1=document.getElementById("result").value+=".";
+       }
+       function solve() {
+        let ele1=document.getElementById("result").value+="=";
+       }
+       function add() {
+        let ele1=document.getElementById("result").value+="+";
+       }
+       function solve() {
+        let ele1=eval(document.getElementById("result").value);
+        let ele2=document.getElementById("result").value=ele1;
+       }
+
+    </script>
+
+
+
+</body>
+</html>
